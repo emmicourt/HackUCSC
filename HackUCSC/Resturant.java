@@ -35,9 +35,9 @@ public class Resturant
 	}
 
 	// makes inputting menu items faster 
-	public void inputMenuItems(String aName, String aType, double cal)
+	public void inputMenuItems(String aType, double cal)
 	{
-		addMenuItem(new MenuItems(aName, aType, cal));
+		addMenuItem(new MenuItems(aType, cal));
 	}
 
 
