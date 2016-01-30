@@ -8,31 +8,51 @@ public class Resturant
     // variables 
 	private String name;
 	private String type;
-	private int menuLength;
-	private List<MenuItems> menu = new ArrayList<MenuItems>();
+	public ArrayList<MenuItems> menu = new ArrayList<MenuItems>();
 
-	// Constructor 
+	// Constructor -------------------------------------------------
 	public Resturant(String aName, String aType)
 	{
 		name = aName;
 		type = aType;
 	}
 
-	// Accessor Methods 
-	public String getName()
+	// Accessor Methods --------------------------------------------
+	public String getRestName()
 	{
 		return this.name;
 	}
 
-	public String getType()
+	public String getRestType()
 	{
 		return this.type;
 	}
 
-	//other methods 
-	public void addItem(MenuItems a)
+	//other methods ------------------------------------------------
+	public void addMenuItem(MenuItems a)
 	{
-		this.menu.add(a);
+		menu.add(a);
+	}
+
+	// makes inputting menu items faster 
+	public void inputMenuItems(String aName, String aType, double cal)
+	{
+		addMenuItem(new MenuItems(aName, aType, cal));
+	}
+
+
+	// checks menu for menu type
+	public boolean hasMenuType(Resturant a, String type)
+	{
+		boolean contains = false;
+		for(int i = 0; i < menu.size(); i++)
+		{
+			String indexType = (a.menu.get(i)).getMenuType();
+			
+			if(indexType.equals(type))
+				contains = true;
+		}
+		return contains;
 	}
 }
 
