@@ -42,12 +42,12 @@ public class Resturant
 
 
 	// checks menu for menu type
-	public boolean hasMenuType(Resturant a, String type)
+	public boolean hasMenuType(String type)
 	{
 		boolean contains = false;
 		for(int i = 0; i < menu.size(); i++)
 		{
-			String indexType = (a.menu.get(i)).getMenuType();
+			String indexType = (this.menu.get(i)).getMenuType();
 			
 			if(indexType.equals(type))
 				contains = true;
