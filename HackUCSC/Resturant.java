@@ -11,10 +11,9 @@ public class Resturant
 	public ArrayList<MenuItems> menu = new ArrayList<MenuItems>();
 
 	// Constructor -------------------------------------------------
-	public Resturant(String aName, String aType)
+	public Resturant(String aName)
 	{
 		name = aName;
-		type = aType;
 	}
 
 	// Accessor Methods --------------------------------------------
@@ -23,21 +22,10 @@ public class Resturant
 		return this.name;
 	}
 
-	public String getRestType()
-	{
-		return this.type;
-	}
-
 	//other methods ------------------------------------------------
 	public void addMenuItem(MenuItems a)
 	{
 		menu.add(a);
-	}
-
-	// makes inputting menu items faster 
-	public void inputMenuItems(String aType, double cal)
-	{
-		addMenuItem(new MenuItems(aType, cal));
 	}
 
 

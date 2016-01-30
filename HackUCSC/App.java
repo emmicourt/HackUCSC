@@ -15,12 +15,6 @@ public class App
 		database.add(a);
 	}
 
-	// to make inputing resturants faster 
-	public void inputResturant(String aName, String aType)
-	{
-		addResturant(new Resturant(aName, aType));
-	}
-
 	//Comparing resturants 
 	public boolean hasRestType(String aType)
 	{
@@ -67,6 +61,16 @@ public class App
 			}
 		}
 		return database.get(i);
+	}
+
+	public void main(String[] args)
+	{
+
+		Resturant mcd = new Resturant("McDonalds");
+		database.add(mcd);
+		MenuItems burger = new MenuItems("burger",500);
+		mcd.menu.add(burger);
+
 	}
 
 }
