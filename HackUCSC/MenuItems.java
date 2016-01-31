@@ -5,13 +5,14 @@
 public class MenuItems
 {
 	//variables
-	private String type;  
-	private double calories; // in grams 
+	private String type, category;
+	private int calories; // in grams 
 
 	//constructors ----------------------------------------------
-	public MenuItems(String aType, double cal)
+	public MenuItems(String aType, String aCategory, int cal)
 	{
 		type = aType;
+		category = aCategory;
 		calories = cal; 
 	}
 
@@ -22,9 +23,14 @@ public class MenuItems
 		return this.type; 
 	}
 
-	public double getCalories()
+	public int getCalories()
 	{
 		return this.calories;
+	}
+
+	public String getMenuCategory()
+	{
+		return this.category;
 	}
 
 }

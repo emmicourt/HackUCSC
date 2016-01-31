@@ -30,18 +30,20 @@ public class Resturant
 
 
 	// checks menu for menu type
-	public boolean hasMenuType(String type)
+	public boolean hasMenuCat(String aCat)
 	{
 		boolean contains = false;
 		for(int i = 0; i < menu.size(); i++)
 		{
-			String indexType = (this.menu.get(i)).getMenuType();
+			String indexCat = (this.menu.get(i)).getMenuCategory();
 			
-			if(indexType.equals(type))
+			if(indexCat.equals(aCat))
 				contains = true;
 		}
 		return contains;
 	}
+
+	
 }
 
 
