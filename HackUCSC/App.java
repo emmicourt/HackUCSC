@@ -38,11 +38,11 @@ public class App
 	public static Resturant lowestCal(String menuType)
 	{
 		int i;
+		int minCalRestIndex = 0;
 
 		for(i=0; i < database.size(); i++)
 		{
 			Resturant a = database.get(i);
-			double minCalRestIndex = 0;
 			if(a.hasMenuType(menuType))
 			{
 				for(int j = 0; j < a.menu.size(); j++)
@@ -61,7 +61,7 @@ public class App
 				}
 			}
 		}
-		return database.get(i);
+		return database.get(minCalRestIndex);
 	}
 
 	public static boolean checkPrecence(String type)
@@ -120,7 +120,7 @@ public class App
 		
 			if(checkPrecence(input))
 			{
-				//healthiest = lowestCal(input);
+				healthiest = lowestCal(input);
 				break;
 			}
 			else
@@ -128,6 +128,9 @@ public class App
 				System.out.println("Option not available");
 			}
 		}
+
+		String output = healthiest.getRestName();
+		System.out.println(output);
 	
 	}
 
