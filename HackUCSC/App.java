@@ -156,9 +156,6 @@ public class App
 		MenuItems lowestCalBurger,lowestSodBurger, lowestFatburger;
 		int calorieCount, sodiumCount, fatCount; 
 
-
-		Scanner sc = new Scanner(System.in);
-
 //=============================================================================
 		// McDonalds Data =====================================================
 		Resturant mcd = new Resturant("McDonalds");
@@ -242,23 +239,13 @@ public class App
 		int[] sodCoor;
 		int[] fatCoor;
 
-		while(true)
-		{
-			input = sc.nextLine();
 
-		
-			if(checkPrecence(input))
-			{
-				calCoor = lowestCal(input);
-				sodCoor = lowestSod(input);
-				fatCoor = lowestFat(input);
-				break;
-			}
-			else
-			{
-				System.out.println("Option not available");
-			}
-		}
+		Scanner sc = new Scanner(System.in);
+		input = sc.nextLine();
+
+		calCoor = lowestCal(input);
+		sodCoor = lowestSod(input);
+		fatCoor = lowestFat(input);
 
 		
 		lowestCalRest = database.get(calCoor[1]);
@@ -282,11 +269,11 @@ public class App
 		String e = lowestFatRest.getRestName();
 		String f = lowestFatburger.getMenuType();
 
-		System.out.println("The lowest: 		resturants    Burger     Calories");
-		System.out.println("	calories:	" +a+ "           " +b+ "    " + calorieCount);
-		System.out.println("	fat:        "+e+"             "+f+"      "+ fatCount);
-		System.out.println("	sodium:     "+c+"             "+d+"      "+sodiumCount);
-	
+		System.out.println("The lowest: 		resturants       Calories");
+		System.out.println("	calories:	"+a+"        " + calorieCount);
+		System.out.println("	fat:            "+e+"          "+ fatCount);
+		System.out.println("	sodium:         "+c+"        "+sodiumCount);
+
 	}
 
 }
