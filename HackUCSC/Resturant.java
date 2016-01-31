@@ -12,21 +12,15 @@ public class Resturant
 
 	// Constructor -------------------------------------------------
 	public Resturant(String aName)
-	{
-		name = aName;
-	}
+	{ name = aName; }
 
 	// Accessor Methods --------------------------------------------
 	public String getRestName()
-	{
-		return this.name;
-	}
+	{ return this.name; }
 
 	//other methods ------------------------------------------------
 	public void addMenuItem(MenuItems a)
-	{
-		menu.add(a);
-	}
+	{ menu.add(a); }
 
 
 	// checks menu for menu type
@@ -43,7 +37,7 @@ public class Resturant
 		return contains;
 	}
 
-	
+
 }
 
 
